@@ -132,7 +132,7 @@ footer{padding:28px 0;color:var(--muted);display:flex;justify-content:space-betw
         <h1>Brand, UI & Graphic Design — that clicks.</h1>
         <p>Freelance designer creating clean, modern visuals for startups, apps, and small businesses. Available for commissions and collaborations.</p>
         <div class="hero-ctas">
-          <a class="liquidGlass-wrapper" href="#contact">
+          # <a class="liquidGlass-wrapper" href="#contact">
             <div class="liquidGlass-effect"></div>
             <div class="liquidGlass-tint"></div>
             <div class="liquidGlass-shine"></div>
