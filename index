@@ -116,7 +116,7 @@ footer{padding:28px 0;color:var(--muted);display:flex;justify-content:space-betw
     </div>
     <nav>
       <a class="link" href="#" onclick="openPopup()">About</a>
-      <a class="link" href="#contact">Contact</a>
+      # <a class="link" href="#contact">Contact</a>
       <a class="liquidGlass-wrapper" href="mailto:jaxonatchison10@gmail.com" onclick="if(/Mobi|Android/i.test(navigator.userAgent)){this.href='sms:4172942667'}">
         <div class="liquidGlass-effect"></div>
         <div class="liquidGlass-tint"></div>
