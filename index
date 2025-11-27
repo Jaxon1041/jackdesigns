@@ -24,7 +24,7 @@ header{display:flex;align-items:center;justify-content:space-between;padding:8px
 .logo{width:48px;height:48px;border-radius:8px;display:flex;align-items:center;justify-content:center;color:white;font-weight:800;animation:fadeIn 1s ease 0.5s forwards;opacity:0;}
 nav{display:flex;gap:18px;align-items:center}
 a.link{color:var(--muted);text-decoration:none;font-weight:600;animation:fadeIn 1s ease 0.7s forwards;opacity:0;}
-.liquidGlass-wrapper {position: relative; display: inline-block; border-radius: 18px; overflow: hidden; cursor: pointer; font-weight: 600; transition: transform 0.3s ease, box-shadow 0.3s ease; animation:fadeIn 1s ease 0.9s forwards; opacity:0;}
+.liquidGlass-wrapper {position: relative; display: inline-block; border-radius: 18px; overflow: hidden; cursor: pointer; font-weight: 600; transition: transform 0.3s ease, box-shadow 0.3s ease; animation:fadeIn 1s ease 0.9s forwards;opacity:0;}
 .liquidGlass-wrapper:hover { transform: scale(1.05); box-shadow: 0 8px 24px rgba(255,255,255,0.2); }
 .liquidGlass-effect { position: absolute; inset:0; z-index:0; background: rgba(255,255,255,0.15); backdrop-filter: blur(12px) saturate(180%); -webkit-backdrop-filter: blur(12px) saturate(180%); border:1px solid rgba(255,255,255,0.25); border-radius: 18px; pointer-events:none;}
 .liquidGlass-tint { position: absolute; inset:0; z-index:1; background: rgba(255,255,255,0.05); border-radius: 18px; pointer-events:none;}
@@ -48,55 +48,15 @@ footer{padding:28px 0;color:var(--muted);display:flex;justify-content:space-betw
 .popup-close{position:absolute;top:8px;right:12px;font-size:20px;cursor:pointer;}
 @media(max-width:1000px){.services{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:600px){
-  /* Hide header "Hire me" button */
-  header nav .liquidGlass-wrapper {
-    display: none;
-  }
-
-  /* Header vertical layout */
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
-  }
-
-  nav {
-    gap: 12px;
-    flex-wrap: wrap;
-  }
-
-  /* Hero adjustments */
-  .hero-left h1 {
-    font-size: 28px;
-  }
-
-  .hero-left p {
-    font-size: 14px;
-  }
-
-  .hero-ctas {
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  /* Stack services vertically */
-  .services {
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
-
-  .wrap {
-    padding: 16px;
-  }
-
-  footer {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
-  }
+  header{flex-direction:column;align-items:flex-start;gap:12px;}
+  nav{gap:12px;flex-wrap:wrap;}
+  .hero-left h1{font-size:28px;}
+  .hero-left p{font-size:14px;}
+  .hero-ctas{flex-direction:column;gap:8px;}
+  .services{grid-template-columns:1fr;gap:12px;}
+  .wrap{padding:16px;}
+  footer{flex-direction:column;align-items:flex-start;gap:12px;}
 }
-
-/* Animations */
 @keyframes fadeInDown { from {opacity:0; transform:translateY(-20px);} to {opacity:1; transform:translateY(0);} }
 @keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
 @keyframes fadeInUp { from {opacity:0; transform:translateY(20px);} to {opacity:1; transform:translateY(0);} }
@@ -116,7 +76,6 @@ footer{padding:28px 0;color:var(--muted);display:flex;justify-content:space-betw
     </div>
     <nav>
       <a class="link" href="#" onclick="openPopup()">About</a>
-      
       <a class="liquidGlass-wrapper" href="mailto:jaxonatchison10@gmail.com" onclick="if(/Mobi|Android/i.test(navigator.userAgent)){this.href='sms:4172942667'}">
         <div class="liquidGlass-effect"></div>
         <div class="liquidGlass-tint"></div>
@@ -132,7 +91,7 @@ footer{padding:28px 0;color:var(--muted);display:flex;justify-content:space-betw
         <h1>Brand, UI & Graphic Design — that clicks.</h1>
         <p>Freelance designer creating clean, modern visuals for startups, apps, and small businesses. Available for commissions and collaborations.</p>
         <div class="hero-ctas">
-          # <a class="liquidGlass-wrapper" href="#contact">
+          <a class="liquidGlass-wrapper" href="#contact">
             <div class="liquidGlass-effect"></div>
             <div class="liquidGlass-tint"></div>
             <div class="liquidGlass-shine"></div>
@@ -151,9 +110,8 @@ footer{padding:28px 0;color:var(--muted);display:flex;justify-content:space-betw
     <section class="contact-info" id="contact">
       <div onclick="window.location='tel:4172942667'">Phone: <span>(417) 294-2667</span></div>
       <div onclick="window.location='mailto:jaxonatchison10@gmail.com'">Email: <span>jaxonatchison10@gmail.com</span></div>
-      <div onclick="window.open('https://www.google.com/maps/search/?api=1&query=Valdosta+GA','_blank')">Location: <span>Valdosta, GA</span></div>
+      <div>Location: <span>Valdosta, GA</span></div>
     </section>
-
   </main>
 
   <footer>
